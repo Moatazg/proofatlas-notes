@@ -169,6 +169,26 @@ The prepared tasks are well posed and the record of failed approaches is genuine
 
 ---
 
+## Maintaining these notes
+
+These notes are a snapshot of a live site, so they go stale. Everything published here lives in one file, `README.md`. Working material — raw page dumps, drafts, anything mid-flight — belongs in `local/`, which is gitignored and never published.
+
+**When to refresh.** The site is in beta and its numbers move. A check every month or two is reasonable; a check is definitely warranted if the beta opens up, since that would change the whole "How to use it" section.
+
+**What to re-check, in order:**
+
+1. **Beta status** — `/collaboration/`. Does it still say task, agent, and submission controls are unavailable? If they have opened, the "Handing a task to an AI assistant" section needs rewriting: the hand-copying step goes away and a real submission path replaces it.
+2. **The counters** — the home page and `/collaboration/`. Workspace count, investigation-line count, ready-task count, and the category percentages. These are the fastest-moving figures in the file.
+3. **Claimed advances** — `/advances/`. Items get added, and an item's evidence label can change (for instance "acceptance review open" becoming "Accepted in ProofAtlas"). Re-copy the whole table rather than patching rows.
+4. **Workspace structure** — one workspace page, e.g. the Tate Conjecture. Confirm the sections, the route representation, and the per-item metadata still match what the Vocabulary section describes.
+5. **`/about/`** — currently a 404. If a page appears naming who runs ProofAtlas and how it is funded, that is the single most valuable addition to make, and the Provenance note about the gap should come out.
+
+**When updating:** change the "Compiled" date at the top and the "as of" date on the advances heading. Keep the quotations verbatim — if a phrase on the site has changed, replace the quotation rather than paraphrasing around it. If a figure now contradicts what is written here, replace it and, where the site itself is inconsistent, say so in Caveats as the existing counter-drift note does.
+
+**What not to change:** the statement that this is unaffiliated, and the rule that no claim here has been independently verified. Both remain true no matter how the site evolves.
+
+---
+
 ## Provenance
 
 Sources, all fetched 2026-09-13:

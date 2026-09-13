@@ -1,0 +1,9 @@
+# Local working material — raw page dumps, drafts, anything mid-flight.
+# The repo publishes the finished guide only; working files stay on the machine.
+local/
+scratch/
+*.local.md
+
+# OS / editor
+.DS_Store
+*.swp
