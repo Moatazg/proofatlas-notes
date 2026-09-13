@@ -101,6 +101,54 @@ Read the badge before you read the mathematics. "Accepted in ProofAtlas" is an i
 
 ---
 
+## The method — and how to build the same thing for your own problem
+
+ProofAtlas publishes no methodology document. There is no `/about/` page, and the papers section explains verification for individual results but not how a workspace is assembled. What follows is read off the artifacts themselves — the same structure recurs on every workspace page examined, so it is clearly a fixed schema rather than a per-problem improvisation.
+
+This matters beyond the site. Their 110-odd workspaces are all named open conjectures in pure mathematics; a problem outside that set gets no workspace. But the schema is not specific to conjectures, and it can be applied to any research problem by hand.
+
+### The schema
+
+**1. A layered problem statement.** Three registers, in order: a one-sentence question in plain language; the same thing in notation; then an exact formal statement with every variable defined and every condition explicit. Yau's Nodal-Set workspace opens with "is the hypersurface measure of its zero set bounded above by a constant times its frequency √λ?" and only then descends to the formal version. The layering is what lets a reader — or an agent — enter at the right level of precision instead of guessing it.
+
+**2. Routes, not a proof.** The problem is not treated as one undifferentiated difficulty. It carries several independent *routes*, each a proposed path to the result, and each broken into discrete steps joined by dependency arrows. Several routes coexist on the same problem; they are not ranked.
+
+**3. Typed steps.** Every node in a route is one of a small number of kinds: theorem candidate, reduction, open obligation, narrowed route, definition. The type tells you what kind of work the node still needs.
+
+**4. Typed edges.** Dependencies are labeled too, not merely drawn: "supports", "depends on missing premise", "proposed". An arrow saying *depends on missing premise* is the single most useful mark in the whole system — it points at a gap and says nobody has filled it.
+
+**5. Status separate from evidence.** Two independent axes, and conflating them is the mistake the schema exists to prevent.
+   - *Status* — active, open, in progress, blocked, stopped. Where the work stands.
+   - *Evidence posture* — peer-reviewed, source-reported, unaudited, narrowed, failed. What justifies believing it.
+
+   A step can be active and unaudited at once. Source attribution (author, year, DOI) travels with the evidence axis, not the status one.
+
+**6. Failures retained as first-class objects.** Approaches tried and eliminated are kept in the record, tagged as such, at roughly 3% of the corpus. They are not deleted when they fail. This is the part most working notes get wrong, and the part that pays for itself: without it, everyone who arrives — human or machine — re-derives the same dead end.
+
+**7. Tasks with three parts.** Every prepared task is a target, a suggested move, and a constraint. From the Yau workspace, verbatim: target — "Prove bounded-overlap Laurent-corona selection and gauge-coherent amplitude-energy telescoping on surfaces"; move — "Audit annular screening in one fixed isothermal disk, then build divisor-weighted ball growth and prove the parent/child amplitude inequality before summing the surface decomposition." Elsewhere the third part appears as an explicit warning about which arguments will fail. A target alone is a wish; the three parts together are workable.
+
+**8. A verification endpoint named exactly.** Where something is machine-checked, the record names the precise declaration, the audited commit, and the scope of the audit — for example that Lean "checks only the exact displayed endpoint Bondy.bondy_longest_cycle at audited source commit 9e13b044", over a "204-module dependency cone", reporting "no project mathematical axioms or sorry". Not "verified" — *this statement, at this commit, under these foundations*.
+
+**9. A corrections log that separates presentation from substance.** Record corrections read like: "We corrected the cited passages. We removed a duplicate or outdated task or route step… The mathematical claims and their status did not change." Editorial churn is logged where it cannot be mistaken for mathematical movement.
+
+**10. An explicit statement of what the record does not establish.** On the workspace: "The route map and retained computations do not by themselves establish this statement." Sitewide: a Lean check settles neither replication, nor peer review, nor priority, nor whether the formal statement matches the informal conjecture.
+
+### Applying it to a problem of your own
+
+The schema needs no software. It is a way of organizing a directory of notes, and the discipline is in the labels rather than the tooling.
+
+1. **State the problem in all three registers** — question, notation, formal statement. Do this before anything else; most of the ambiguity in a research problem surfaces here.
+2. **Enumerate routes separately.** Give each independent approach its own space. Resist collapsing them into one narrative early — the point is to keep alternatives alive and comparable.
+3. **Break each route into typed steps and name the dependencies.** Mark every place a step rests on something unproved with the equivalent of *depends on missing premise*. The set of those marks is your actual research agenda.
+4. **Label status and evidence separately on every claim,** and attach the source to the evidence label. Never let "we are working on it" and "it is verified" share a field.
+5. **Keep a failures file and write to it every time something is ruled out** — what was tried, how far it got, why it stopped. Treat deleting a dead end as data loss.
+6. **Write next steps as three-part tasks** — target, suggested move, known constraint — not as a to-do list of topics.
+7. **Where a claim is machine-checkable, name the endpoint exactly**: the statement checked, the version checked, and what the check did not cover.
+8. **Log presentation changes apart from mathematical ones,** so a reader can tell reorganization from progress.
+9. **Say in writing what the record does not establish.** A well-organized set of notes is persuasive out of proportion to its content; the disclaimer is what keeps it honest.
+
+Done this way, the result is what makes a problem workable by someone who did not live through its history — which includes an AI assistant, and includes you in six months.
+
 ## Claimed advances (as of 2026-09-13)
 
 Nine, with the site's own evidence labels:
